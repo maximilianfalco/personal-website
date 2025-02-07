@@ -32,7 +32,7 @@ export default function Hero() {
           </p>
           <div className='flex mt-4 gap-3 w-full justify-center xl:justify-start'>
             <a href={Resume} target='_blank' className='transition-transform hover:scale-105'>
-              <div className='w-fit h-10 bg-light-secondary dark:bg-dark-secondary rounded-lg shadow-lg py-1 px-2 flex items-center'>
+              <div className='w-fit h-10 bg-light-secondary dark:bg-gray-400 rounded-lg shadow-lg py-1 px-2 flex items-center'>
                 <PaperClipIcon className='h-5 w-5 mr-1' />
                 My Resume!
               </div>
