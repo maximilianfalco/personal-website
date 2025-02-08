@@ -9,7 +9,7 @@ function App() {
     <ReactLenis root>
       <div className=''>
         <Hero />
-        <div className='px-12 md:px-16 lg:px-20 box-border mb-8 xl:mb-0 gap-10 flex flex-col'>
+        <div className='px-12 md:px-16 lg:px-20 box-border mb-14 gap-10 flex flex-col'>
           <CurrentlyWorkingOn />
           <PastProjects />
         </div>

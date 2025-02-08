@@ -7,7 +7,7 @@ import AlgoVizImage from '../assets/project_screenshots/algo-viz.png'
 
 const PastProjects = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center xl:items-start">
+    <div className="h-fit flex flex-col items-center xl:items-start">
       <p className='text-5xl font-bold text-center md:text-left w-fit mt-4 lg:mt-0'>
         Past Projects
       </p>
