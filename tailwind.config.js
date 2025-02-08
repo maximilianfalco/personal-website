@@ -12,6 +12,9 @@ export default {
         "light-secondary": "#E3E8EF",
         "dark-primary": "#242424",
         "dark-secondary": "#839D9A",
+      },
+      screens: {
+        '4k': '2560px',
       }
     },
   },
