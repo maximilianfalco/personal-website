@@ -1,13 +1,34 @@
-import ProfilePictureImage from '../assets/cropped.jpg'
+import ProfilePictureImage from '../assets/cropped-background.png'
+import Cutout from '../assets/cropped-cutout.png'
 
-const ProfilePicture = () => {
+interface ProfilePictureProps {
+  cutout: boolean;
+}
+
+const ProfilePicture: React.FC<ProfilePictureProps> = ({ cutout }) => {
   return (
-      <img
-        src={ProfilePictureImage}
-        alt="Maximilian Falco Widjaya"
-        className="w-full rounded-full"
-        title='Maximilian Falco Widjaya'
-      />
+    <div>
+      {
+        !cutout ?
+          (
+            <img
+            src={ProfilePictureImage}
+            alt="Maximilian Falco Widjaya"
+            className="w-full rounded-full object-cover"
+            title='Maximilian Falco Widjaya'
+            />
+          )
+          :
+          (
+            <img
+            src={Cutout}
+            alt="Maximilian Falco Widjaya"
+            className="w-full rounded-full object-cover"
+            title='Maximilian Falco Widjaya'
+            />
+          )
+      }
+    </div>
   )
 }
 

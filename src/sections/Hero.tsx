@@ -13,8 +13,15 @@ export default function Hero() {
       <DarkLightToggle />
       <body className='flex gap-5 items-center flex-wrap justify-center xl:flex-nowrap xl:justify-start max-w-[80%]'>
         
-        <section className="w-40 h-40 lg:w-64 lg:h-64 xl:w-80 xl:h-80 overflow-hidden flex">
-          <ProfilePicture />
+        <section className="w-40 h-40 lg:w-64 lg:h-64 xl:w-80 xl:h-80 overflow-hidden flex relative rounded-full">
+          <div className='absolute inset-0 z-10 hover:scale-125 hover:-translate-y-4 hover:translate-x-1 transition-transform'>
+            <a href={Resume} target='_blank' className='transition-transform hover:scale-105'>
+              <ProfilePicture cutout={true} />
+            </a>
+          </div>
+          <div className='absolute inset-0 z-0'>
+            <ProfilePicture cutout={false} />
+          </div>
         </section>
 
         <section className='flex flex-wrap justify-center h-fit w-full xl:w-fit xl:block'>
