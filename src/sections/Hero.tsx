@@ -1,3 +1,6 @@
+import Lottie, { LottieRefCurrentProps } from 'lottie-react';
+import ScrollAnimationData from '../assets/lottie-files/scroll-arrow.json';
+
 import LinkedInLogo from '../assets/linkedIn.png'
 import Resume from '../assets/Maximilian_Falco_Widjaya.pdf'
 import DarkLightToggle from '../components/DarkLightToggle';
@@ -7,10 +10,39 @@ import {
   PaperClipIcon
 } from '@heroicons/react/24/outline';
 
+import { useEffect, useRef, useState } from 'react';
+
 export default function Hero() {
+  const [isVisible, setIsVisible] = useState(false);
+  const lottieRef = useRef<LottieRefCurrentProps | null>(null);
+  lottieRef.current?.setSpeed(0.7);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY === 0) {
+        setIsVisible(true); // Show when at the top
+        lottieRef.current?.goToAndPlay(0, true);
+      } else {
+        setIsVisible(false); // Hide when scrolling down
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll); // Cleanup
+  }, []);
+
+
   return (
     <main className='lg:min-h-[700px] xl:min-h-screen xl:min-w-screen mt-14 lg:mt-0 p-5 flex justify-center items-center box-border'>
       <DarkLightToggle />
+      <div className={`w-24 h-24 absolute bottom-1 -right-1 ${isVisible ? 'opacity-100' : 'opacity-0'} transition-opacity`}>
+        <Lottie 
+          lottieRef={lottieRef} 
+          animationData={ScrollAnimationData} 
+          loop={true} 
+        />
+      </div>
+      
       <body className='flex gap-5 items-center flex-wrap justify-center xl:flex-nowrap xl:justify-start max-w-[80%]'>
         
         <section className="w-40 h-40 lg:w-64 lg:h-64 xl:w-80 xl:h-80 overflow-hidden flex relative rounded-full">
@@ -54,7 +86,6 @@ export default function Hero() {
             </a>
           </div>
         </section>
-
       </body>
     </main>
   )
