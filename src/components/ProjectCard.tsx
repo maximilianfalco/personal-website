@@ -1,9 +1,13 @@
+import { useNavigate } from "react-router-dom"
+import { FixedURL } from "../utils/constants"
+
 interface ProjectCardProps {
   title: string
   description: string
   image: string
   repoLink?: string
   demoLink?: string
+  detailsPageLink : string
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ 
@@ -11,10 +15,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   description,
   image,
   repoLink,
-  demoLink 
+  demoLink,
+  detailsPageLink 
 }) => {
+
+  const navigate = useNavigate();
+  const handleClick = () => { navigate(`${FixedURL}/${detailsPageLink}`) }
+
   return (
-    <div className='w-full min-h-60 bg-light-secondary dark:bg-dark-secondary rounded-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-transform p-5 flex flex-col'>
+    <div onClick={handleClick} className='w-full min-h-60 border-b-2 border-b-grey dark:border-b-slate-400 dark:bg-dark-secondary rounded-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-transform p-5 flex flex-col cursor-pointer'>
       <p className='text-2xl font-bold text-center lg:text-left w-full'>
         {title || 'Default Title'}
       </p>
@@ -44,14 +53,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               <div className="flex gap-4 justify-center md:justify-start mt-4">
                 {
                   repoLink ? (
-                    <a href={repoLink} target="_blank" className="text-blue-800 hover:underline">
+                    <a href={repoLink} target="_blank" className="text-blue-800 dark:text-orange-400 hover:underline">
                       Repo Link
                     </a>
                   ) : null
                 }
                 {
                   demoLink ? (
-                    <a href={demoLink} target="_blank" className="text-blue-800 hover:underline">
+                    <a href={demoLink} target="_blank" className="text-blue-800 dark:text-orange-400 hover:underline">
                       Demo Link
                     </a>
                   ) : null

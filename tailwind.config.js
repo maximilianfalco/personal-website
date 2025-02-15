@@ -7,15 +7,22 @@ export default {
   ],
   theme: {
     extend: {
+      fontSize: {
+        "2xs": ".5rem",
+      },
       colors: {
         "light-primary": "#ffffff",
         "light-secondary": "#E3E8EF",
         "dark-primary": "#242424",
-        "dark-secondary": "#839D9A",
+        "dark-secondary": "#313131",
       },
       screens: {
         '4k': '2560px',
-      }
+      },
+      fontFamily: {
+        AltoneTrial: ["AltoneTrial"],
+        JetBrainsMono: ["JetBrainsMono"],
+      },
     },
   },
   plugins: [

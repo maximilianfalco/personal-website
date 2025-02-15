@@ -35,7 +35,7 @@ export default function Hero() {
   return (
     <main className='lg:min-h-[700px] xl:min-h-screen xl:min-w-screen mt-14 lg:mt-0 p-5 flex justify-center items-center box-border'>
       <DarkLightToggle />
-      <div className={`w-24 h-24 absolute bottom-1 -right-1 ${isVisible ? 'opacity-100' : 'opacity-0'} transition-opacity`}>
+      <div className={`w-24 h-24 absolute bottom-1 -right-1 ${isVisible ? 'opacity-100' : 'opacity-0'} transition-opacity invert dark:invert-0`}>
         <Lottie 
           lottieRef={lottieRef} 
           animationData={ScrollAnimationData} 
@@ -71,7 +71,7 @@ export default function Hero() {
           </p>
           <div className='flex mt-4 gap-3 w-full justify-center xl:justify-start'>
             <a href={Resume} target='_blank' className='transition-transform hover:scale-105'>
-              <div className='w-fit h-10 bg-light-secondary dark:bg-gray-400 rounded-lg shadow-lg py-1 px-2 flex items-center'>
+              <div className='w-fit h-10 bg-light-secondary dark:bg-gray-600 rounded-lg shadow-lg py-1 px-2 flex items-center'>
                 <PaperClipIcon className='h-5 w-5 mr-1' />
                 My Resume!
               </div>

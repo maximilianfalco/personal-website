@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: AltoneTrial, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -22,6 +22,29 @@
   color: var(--color);
 }
 
+@font-face {
+  font-family: "AltoneTrial";
+  src: url("./assets/fonts/altone-trial/altone-trial.regular.ttf");
+}
+@font-face {
+  font-family: "AltoneTrialOblique";
+  src: url("./assets/fonts/altone-trial/altone-trial.oblique.ttf");
+  font-style: oblique;
+}
+@font-face {
+  font-family: "AltoneTrialBold";
+  src: url("./assets/fonts/altone-trial/altone-trial.bold.ttf");
+  font-style: bold;
+}
+@font-face {
+  font-family: "AltoneTrialBoldOblique";
+  src: url("./assets/fonts/altone-trial/altone-trial.bold-oblique.ttf");
+}
+
+@font-face {
+  font-family: "JetBrainsMono";
+  src: url("./assets/fonts/jetbrains/JetBrainsMono-Regular.ttf");
+}
 /* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
