@@ -1,5 +1,4 @@
 import { Routes, Route } from 'react-router-dom';
-import { FixedURL } from './utils/constants.tsx';
 import './App.css'
 import HomePage from './pages/HomePage.tsx';
 import UnilectivesPage from './pages/UnilectivesPage.tsx';
@@ -12,12 +11,12 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path={`${FixedURL}/`} element={<HomePage />} />
-        <Route path={`${FixedURL}/unilectives`} element={<UnilectivesPage />} />
-        <Route path={`${FixedURL}/bit-trickle`} element={<BitTricklePage />} />
-        <Route path={`${FixedURL}/mnist-dataset-classifier`} element={<MnistClassifierPage />} />
-        <Route path={`${FixedURL}/discord-bot`} element={<DiscordBotPage />} />
-        <Route path={`${FixedURL}/algo-viz`} element={<AlgoVizPage />} />
+        <Route path={`/`} element={<HomePage />} />
+        <Route path={`/unilectives`} element={<UnilectivesPage />} />
+        <Route path={`/bit-trickle`} element={<BitTricklePage />} />
+        <Route path={`/mnist-dataset-classifier`} element={<MnistClassifierPage />} />
+        <Route path={`/discord-bot`} element={<DiscordBotPage />} />
+        <Route path={`/algo-viz`} element={<AlgoVizPage />} />
       </Routes>
     </>
   )

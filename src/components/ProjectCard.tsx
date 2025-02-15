@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router-dom"
-import { FixedURL } from "../utils/constants"
 
 interface ProjectCardProps {
   title: string
@@ -20,7 +19,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
 
   const navigate = useNavigate();
-  const handleClick = () => { navigate(`${FixedURL}/${detailsPageLink}`) }
+  const handleClick = () => { navigate(`${detailsPageLink}`) }
 
   return (
     <div onClick={handleClick} className='w-full min-h-60 border-b-2 border-b-grey dark:border-b-slate-400 dark:bg-dark-secondary rounded-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-transform p-5 flex flex-col cursor-pointer'>
