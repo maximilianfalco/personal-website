@@ -16,7 +16,7 @@ function App() {
         <Route path={`/bit-trickle`} element={<BitTricklePage />} />
         <Route path={`/mnist-dataset-classifier`} element={<MnistClassifierPage />} />
         <Route path={`/discord-bot`} element={<DiscordBotPage />} />
-        <Route path={`/algo-viz`} element={<AlgoVizPage />} />
+        <Route path={`/algorithm-visualizer`} element={<AlgoVizPage />} />
       </Routes>
     </>
   )
