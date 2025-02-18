@@ -18,7 +18,7 @@ const ProjectDetailsLayout: React.FC<ProjectDetailsLayoutProps> = ({
     <div className='w-full flex justify-center items-center flex-col gap-6 mt-24 md:mt-10'>
       <BackToHomeButton />
       <DarkLightToggle />
-      <p className='text-5xl font-bold'>
+      <p className='text-5xl font-bold text-center'>
         {title}
       </p>
       {children}
